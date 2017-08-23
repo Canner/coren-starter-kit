@@ -2,11 +2,8 @@
   "name": "coren-starter-kit",
   "version": "0.0.0",
   "description": "coren starter kit",
-  "homepage": "https://github.com/Canner/coren",
-  "repository": "git@github.com:Canner/render.git",
-  "files": [
-    "lib"
-  ],
+  "homepage": "https://github.com/Canner/coren-starter-kit",
+  "repository": "git@github.com:Canner/coren-starter-kit.git",
   "scripts": {
     "coren-dev": "coren dev",
     "coren-production": "NODE_ENV=production coren build --webpack webpack.config.prod.js"
