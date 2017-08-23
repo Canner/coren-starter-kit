@@ -1,0 +1,25 @@
+{
+  "name": "coren-starter-kit",
+  "version": "0.0.0",
+  "description": "coren starter kit",
+  "homepage": "https://github.com/Canner/coren",
+  "repository": "git@github.com:Canner/render.git",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "coren-dev": "coren dev",
+    "coren-production": "NODE_ENV=production coren build --webpack webpack.config.prod.js"
+  },
+  "dependencies": {
+    "coren": "latest"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.1",
+    "webpack-hot-middleware": "^2.0.0"
+  }
+}
