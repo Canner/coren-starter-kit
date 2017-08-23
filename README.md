@@ -16,6 +16,12 @@ after file is built
 npm run coren-dev
 ```
 
+### production
+
+```bash
+npm run coren-production
+```
+
 # License
 
 MIT [Canner](github.com/canner)
