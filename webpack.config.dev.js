@@ -12,7 +12,8 @@ const config = new CorenWebpack(__dirname, {
   entry: {
     index: [
       'webpack-hot-middleware/client?reload=true',
-      'babel-polyfill'
+      'babel-polyfill',
+      './src/containers/index.js'
     ]
   },
   output: {
@@ -35,7 +36,8 @@ const config = new CorenWebpack(__dirname, {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("development")
+        NODE_ENV: JSON.stringify("development"),
+        isBrowser: true
       }
     }),
     new webpack.HotModuleReplacementPlugin(),

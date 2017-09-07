@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const {HeadCollector} = require('coren');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const extractCSS = new ExtractTextPlugin({
@@ -10,7 +9,7 @@ const extractCSS = new ExtractTextPlugin({
 
 module.exports = {
   entry: {
-    index: './src/containers/index.js'
+    index: './src/components/Index.js'
   },
   webpack: {
     plugins: [
@@ -27,10 +26,6 @@ module.exports = {
         }
       ]
     }
-  },
-  registerCollector: function(app) {
-    app.registerCollector("head", new HeadCollector());
-    return app;
   },
   assetsHost: (env, absolutePath = '') => {
     const rel = path.relative(`${__dirname}/dist/`, absolutePath);

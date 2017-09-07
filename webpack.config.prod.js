@@ -9,9 +9,8 @@ const extractCSS = new ExtractTextPlugin({
 });
 
 const config = new CorenWebpack(__dirname, {
-  // entry is defined in `coren.config.js`
   entry: {
-    index: ['babel-polyfill']
+    index: ['babel-polyfill', './src/containers/index.js']
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -23,7 +22,6 @@ const config = new CorenWebpack(__dirname, {
       {
         test: /\.css$/,
         use: extractCSS.extract({
-          fallback: 'style-loader',
           use: "css-loader"
         })
       }
@@ -36,7 +34,8 @@ const config = new CorenWebpack(__dirname, {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("production")
+        NODE_ENV: JSON.stringify("production"),
+        isBrowser: true
       }
     }),
     extractCSS
