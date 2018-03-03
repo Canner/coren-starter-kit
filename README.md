@@ -1,5 +1,7 @@
 # coren-starter-kit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Canner/coren-starter-kit.svg)](https://greenkeeper.io/)
+
 ## Usage
 
 ```bash
